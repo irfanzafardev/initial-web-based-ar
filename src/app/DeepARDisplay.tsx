@@ -46,6 +46,7 @@ const DeepARDisplay: React.FC<TDeepARDisplayProps> = ({ effectPath, licenseKey, 
 					additionalOptions: {
 						cameraConfig: {
 							disableDefaultCamera: true,
+							facingMode: "user",
 						},
 					},
 				});
@@ -108,8 +109,8 @@ const DeepARDisplay: React.FC<TDeepARDisplayProps> = ({ effectPath, licenseKey, 
 	};
 
 	return (
-		<div className="relative w-full h-full min-h-[300px]">
-			<div ref={containerRef} className="w-full h-full bg-black rounded-lg overflow-hidden" />
+		<div className="relative w-full min-h-[600px] bg-black rounded-t-xl overflow-hidden">
+			<div ref={containerRef} className="w-full h-[600px]" />
 
 			{isLoading && (
 				<div className="absolute inset-0 bg-gray-900/90 flex items-center justify-center">
